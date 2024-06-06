@@ -6,7 +6,7 @@ const transactionTypeDef = `#graphql
         paymentType:String!
         category:String!
         amount:Float!
-        location:String!
+        location:String
         date:String!
     }
 
@@ -18,8 +18,12 @@ const transactionTypeDef = `#graphql
     type Mutation{
         createTransaction(input:createTransactionInput!):Transaction!
         updateTransaction(input:updateTransactionInput!):Transaction!
-        deleteTransaction(transaction:ID!):Transaction! 
+        deleteTransaction(transactionId:ID!):Transaction! 
     }
+
+    type CategoryStatistics {
+    category: String!
+    totalAmount: Float!  }
 
     input createTransactionInput{
         description:String!

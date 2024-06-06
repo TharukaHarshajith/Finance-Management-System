@@ -3,7 +3,7 @@ import { Route,Routes, Navigate } from 'react-router-dom';
 import { HomePage } from './pages/HomePage';
 import { LoginPage } from './pages/LoginPage';
 import { NotFoundPage } from './pages/NotFoundPage';
-import { TransactionPage } from './pages/Transaction';
+import { TransactionPage } from './pages/TransactionPage';
 import { SignUpPage } from './pages/SignUpPage';
 import Header from './components/ui/Header';
 import { GET_AUTHENTICATED_USER } from './graphql/queries/user.queries';
@@ -13,10 +13,8 @@ import { Toaster } from 'react-hot-toast';
 function App() {
   //const [count, setCount] = useState(0)
   
-  const { loading, data, error } = useQuery(GET_AUTHENTICATED_USER);
-  console.log("Loading:",loading);
-  console.log("Authenicated User: ",data);
-  console.log("Error:",error);
+  const { loading, data } = useQuery(GET_AUTHENTICATED_USER);
+  
   if(loading) return null;
   return (
     <>
