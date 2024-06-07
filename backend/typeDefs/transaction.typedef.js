@@ -8,12 +8,16 @@ const transactionTypeDef = `#graphql
         amount:Float!
         location:String
         date:String!
+        user:User!
     }
 
     type Query{
         transactions:[Transaction!]
         transaction(transactionId:ID!):Transaction
+        categoryStatistics:[CategoryStatistics!]
     }
+
+    
 
     type Mutation{
         createTransaction(input:createTransactionInput!):Transaction!
