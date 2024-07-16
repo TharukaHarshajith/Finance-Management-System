@@ -76,9 +76,10 @@ export function TransactionPage(){
 
 	return (
 		<div className='h-screen max-w-4xl mx-auto flex flex-col items-center'>
-			<p className='md:text-4xl text-2xl lg:text-4xl font-bold text-center relative z-50 mb-4 mr-4 bg-gradient-to-r from-pink-600 via-indigo-500 to-pink-400 inline-block text-transparent bg-clip-text'>
-				Update this transaction
+			<p className='md:text-4xl text-2xl lg:text-4xl font-bold text-center relative z-50 mb-4 mr-4 bg-gradient-to-r from-green-400 via-yellow-400 to-orange-400 inline-block text-transparent bg-clip-text'>
+			Adjust Your Budget
 			</p>
+
 			<form className='w-full max-w-lg flex flex-col gap-5 px-3 ' onSubmit={handleSubmit}>
 				{/* TRANSACTION */}
 				<div className='flex flex-wrap'>
@@ -223,10 +224,9 @@ export function TransactionPage(){
 				</div>
 				{/* SUBMIT BUTTON */}
 				<button
-					className='text-white font-bold w-full rounded px-4 py-2 bg-gradient-to-br
-          from-pink-500 to-pink-500 hover:from-pink-600 hover:to-pink-600'
-					type='submit'
-					disabled={loadingUpdate}
+				className='text-white font-bold w-full rounded px-4 py-2 bg-gradient-to-br from-orange-400 to-orange-400 hover:from-orange-500 hover:to-orange-500'
+				type='submit'
+				disabled={loadingUpdate}
 				>
 					{loadingUpdate ? "Updating..." : "Update Transaction"}
 

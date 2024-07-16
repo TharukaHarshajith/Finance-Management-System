@@ -59,16 +59,17 @@ export function HomePage (){
 
 			categories.forEach((category) => {
 				if (category === "saving") {
-					backgroundColors.push("rgba(75, 192, 192)");
-					borderColors.push("rgba(75, 192, 192)");
+					backgroundColors.push("rgba(0, 200, 0)"); // Green
+					borderColors.push("rgba(0, 200, 0)");
 				} else if (category === "expense") {
-					backgroundColors.push("rgba(255, 99, 132)");
-					borderColors.push("rgba(255, 99, 132)");
+					backgroundColors.push("rgba(255, 165, 0)"); // Orange
+					borderColors.push("rgba(255, 165, 0)");
 				} else if (category === "investment") {
-					backgroundColors.push("rgba(54, 162, 235)");
-					borderColors.push("rgba(54, 162, 235)");
+					backgroundColors.push("rgba(255, 255, 0)"); // Yellow
+					borderColors.push("rgba(255, 255, 0)");
 				}
-			});
+				});
+			
 
 			setChartData((prev) => ({
 				labels: categories,
@@ -105,8 +106,8 @@ export function HomePage (){
 		<>
 			<div className='flex flex-col gap-6 items-center max-w-7xl mx-auto z-20 relative justify-center'>
 				<div className='flex items-center'>
-					<p className='md:text-4xl text-2xl lg:text-4xl font-bold text-center relative z-50 mb-4 mr-4 bg-gradient-to-r from-pink-600 via-indigo-500 to-pink-400 inline-block text-transparent bg-clip-text'>
-						Spend wisely, track wisely
+					<p className='md:text-4xl text-2xl lg:text-4xl font-bold text-center relative z-50 mb-4 mr-4 bg-gradient-to-r from-green-400 via-yellow-400 to-orange-400 inline-block text-transparent bg-clip-text'>
+						Plan Today, Prosper Tomorrow
 					</p>
 					<img
 						src={authUserData?.authUser.profilePicture}

@@ -58,7 +58,7 @@ export function SignUpPage() {
 					<div className='max-w-md w-full p-6'>
 						<h1 className='text-3xl font-semibold mb-6 text-black text-center'>Sign Up</h1>
 						<h1 className='text-sm font-semibold mb-6 text-gray-500 text-center'>
-							Join to keep track of your expenses
+							Join with  <span className='text-yellow-700'>Budget Buddy </span> and keep track of your expenses
 						</h1>
 						<form className='space-y-4' onSubmit={handleSubmit}>
 							<InputField

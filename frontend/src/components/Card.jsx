@@ -18,8 +18,8 @@ import toast from "react-hot-toast";
 
 const categoryColorMap = {
 	saving: "from-green-700 to-green-400",
-	expense: "from-pink-800 to-pink-600",
-	investment: "from-blue-700 to-blue-400",
+	expense: "from-orange-700 to-orange-400",
+	investment: "from-yellow-600 to-yellow-300",
 	// Add more categories and corresponding color classes as needed
 };
 
